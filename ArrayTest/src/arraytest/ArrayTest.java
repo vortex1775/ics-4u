@@ -17,7 +17,6 @@ public class ArrayTest {
         listTest.add("Second item");
         listTest.add("third item");
         listTest.add(7);
-        listTest.add(8);
         System.out.println(listTest);
 
         String aryAnimals [] = {"Monkey", "Horse", "Chicken", "Cow", "Dog", "Cat"};
