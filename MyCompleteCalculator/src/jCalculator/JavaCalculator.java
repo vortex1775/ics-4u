@@ -355,99 +355,101 @@ public class JavaCalculator extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    //ButtonEvents
+    //ButtonEvents -- Actions that happen as a result of pressing buttons in the application
+    //Button number '2'
     private void btnTwoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTwoActionPerformed
         String btnTwoText = txtDisplay.getText() + btnTwo.getText(); //Adds string stored in button to string in text box
         txtDisplay.setText(btnTwoText);                              //Displays the newly formed string
     }//GEN-LAST:event_btnTwoActionPerformed
-
+    //Button number '3'
     private void btnThreeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnThreeActionPerformed
         String btnThreeText = txtDisplay.getText() + btnThree.getText(); //Adds string stored in button to string in text box
         txtDisplay.setText(btnThreeText);                                //Displays the newly formed string
     }//GEN-LAST:event_btnThreeActionPerformed
-
+    //Button number '4'
     private void btnFourActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFourActionPerformed
         String btnFourText = txtDisplay.getText() + btnFour.getText(); //Adds string stored in button to string in text box
         txtDisplay.setText(btnFourText);                               //Displays the newly formed string
     }//GEN-LAST:event_btnFourActionPerformed
-
+    //Button number '5'
     private void btnFiveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFiveActionPerformed
         String btnFiveText = txtDisplay.getText() + btnFive.getText(); //Adds string stored in button to string in text box
         txtDisplay.setText(btnFiveText);                               //Displays the newly formed string
     }//GEN-LAST:event_btnFiveActionPerformed
-
+    //Button number '6'
     private void btnSixActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSixActionPerformed
         String btnSixText = txtDisplay.getText() + btnSix.getText(); //Adds string stored in button to string in text box
         txtDisplay.setText(btnSixText);                              //Displays the newly formed string
     }//GEN-LAST:event_btnSixActionPerformed
-
+    //Button number '7'
     private void btnSevenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSevenActionPerformed
         String btnSevenText = txtDisplay.getText() + btnSeven.getText(); //Adds string stored in button to string in text box
         txtDisplay.setText(btnSevenText);                                //Displays the newly formed string
     }//GEN-LAST:event_btnSevenActionPerformed
-
+    //Button number '8'
     private void btnEightActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEightActionPerformed
         String btnEightText = txtDisplay.getText() + btnEight.getText(); //Adds string stored in button to string in text box
         txtDisplay.setText(btnEightText);                                //Displays the newly formed string
     }//GEN-LAST:event_btnEightActionPerformed
-
+    //Button number '9'
     private void btnNineActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNineActionPerformed
         String btnNineText = txtDisplay.getText() + btnNine.getText(); //Adds string stored in button to string in text box
         txtDisplay.setText(btnNineText);                               //Displays the newly formed string
     }//GEN-LAST:event_btnNineActionPerformed
-
+    //Button number '0'
     private void btnZeroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnZeroActionPerformed
         String btnZeroText = txtDisplay.getText() + btnZero.getText(); //Adds string stored in button to string in text box
         txtDisplay.setText(btnZeroText);                               //Displays the newly formed string
     }//GEN-LAST:event_btnZeroActionPerformed
-
+    // '+' Button
     private void btnPlusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPlusActionPerformed
         num1 = num1 + Double.parseDouble(txtDisplay.getText()); //Adds the current value of total1 to the value of the textbox converted to a double
         txtDisplay.setText("");                                 //Clears the text box so a new number may be entered
-        operator = '+'; //Defines the character of the opperator
+        operator = '+';                                         //Defines the character of the opperator
     }//GEN-LAST:event_btnPlusActionPerformed
     /*
-    *   Pre-Conditon    These are all functions which evaluate the users input
+    *      Description: Functions to perform various math operations (+ - * / sqrt ^) on the user input
+    *     Pre-Conditon: These are all functions which evaluate the users input
     *                   In order for these functions to work the user must supply
     *                   two values (In the case of the squareRoot function the program
     *                   automatically supplies the second value).
     *
-    *   Post-Condition  After these functions are completed they each return a double value
+    *   Post-Condition: After these functions are completed they each return a double value
     *                   which is the solution of their respected operations
     */
     
     //Function for addition
     private static double addition(double total1, double total2){
-        double solution = total1 + total2;
+        double solution = total1 + total2;          //Creates the variable 'solution' equalled to the two values added together
         return solution;                            //Returns solution
     }
     //Function for subtraction
     private static double subtraction(double total1, double total2){
-        double solution = total1 - total2;
+        double solution = total1 - total2;          //Creates the variable 'solution' equalled to the second value subtracted from the first
         return solution;                            //Returns solution
     }
     //Function for multiplication
     private static double multiply(double total1, double total2){
-        double solution = total1 * total2;
+        double solution = total1 * total2;          //Creates the variable 'solution' equalled to the two values mulitplied together
         return solution;                            //Returns solution
     }
     //Function for division
     private static double division(double total1, double total2){
-        double solution = total1 / total2;
-        return solution; //Returns solution
+        double solution = total1 / total2;          //Creates the variable 'solution' equalled to the first value divided by the second
+        return solution;                            //Returns solution
     }
     //Function for squarerooting
     //**This function only requires one value
     private static double squareRoot(double total1){
-        double solution = Math.sqrt(total1);        //Square root method
-        return solution;
+        double solution = Math.sqrt(total1);        //Creates the variable 'solution' equalled to the square root of a single value using the Math.sqrt function
+        return solution;                            //returns solution
     }
     //Function for raising to powers
     private static double square(double total1, double total2){
-        double solution = Math.pow(total1, total2); //Power method
+        double solution = Math.pow(total1, total2); ////Creates the variable 'solution' equalled to the first value raised to the power of the second using the Math.pow function
         return solution;                            //Returns solution
     }
-        
+    //'=' Button   
     private void btnEqualsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEqualsActionPerformed
         double solution;
         
@@ -457,10 +459,10 @@ public class JavaCalculator extends javax.swing.JFrame {
         *   simply makes num2 equal to zero in order to prevent an error
         *   from trying to make num2 equal a value that isn't there.
         */
-        if (txtDisplay.getText().equals("")){
-            num2 = 0.0;
-        } else {
-                  num2 = Double.parseDouble(txtDisplay.getText());  
+        if (txtDisplay.getText().equals("")){                       //Checks if txtDisplay is blank upon pressing the equal button
+            num2 = 0.0;                                             //Makes num2 equal to zero
+        } else {                                                    //For all other situations
+                  num2 = Double.parseDouble(txtDisplay.getText());  //Makes num2 equal to the number that is typed into the display
                     }
         
         
@@ -469,79 +471,79 @@ public class JavaCalculator extends javax.swing.JFrame {
         *   has inputed into the calculator, then directs the program to the
         *   corresponding function and outputs the solution
         */
-        switch(operator){
-            case '+':
-                solution = addition(num1, num2);
-                txtDisplay.setText(Double.toString(solution));
-                break;
-            case '-':
-                solution = subtraction(num1, num2);
-                txtDisplay.setText(Double.toString(solution));
-                break;
-            case '*':
-                solution = multiply(num1, num2);
-                txtDisplay.setText(Double.toString(solution));
-                break;
-            case '/':
-                solution = division(num1, num2);
-                txtDisplay.setText(Double.toString(solution));
-                break;
-            case 's':
-                solution = squareRoot(num1);
-                txtDisplay.setText(Double.toString(solution));
-                break;
-            case '^':
-                solution = square(num1, num2);
-                txtDisplay.setText(Double.toString(solution));
-                break;
+        switch(operator){                                       //creates switch function that checks the operator variable (which is a char) for each case
+            case '+':                                           //case for addition
+                solution = addition(num1, num2);                //calls the addition function
+                txtDisplay.setText(Double.toString(solution));  //Sets display to show solution
+                break;                                          //ends the switch loop
+            case '-':                                           //case for subtraction
+                solution = subtraction(num1, num2);             //Calls the subtraction function
+                txtDisplay.setText(Double.toString(solution));  //Sets display to show solution
+                break;                                          //Ends the switch loop
+            case '*':                                           //case for multiplication
+                solution = multiply(num1, num2);                //Calls the multiplication function
+                txtDisplay.setText(Double.toString(solution));  //Sets display to show solution
+                break;                                          //Ends the switch loop
+            case '/':                                           //case for division
+                solution = division(num1, num2);                //Calls the division function
+                txtDisplay.setText(Double.toString(solution));  //Sets display to show solution
+                break;                                          //Ends the switch loop
+            case 's':                                           //case for square rooting
+                solution = squareRoot(num1);                    //Calls the squareroot function
+                txtDisplay.setText(Double.toString(solution));  //Sets display to show solution
+                break;                                          //Ends the switch loop
+            case '^':                                           //Case for raising powers
+                solution = square(num1, num2);                  //Calls the raising to powers function
+                txtDisplay.setText(Double.toString(solution));  //Sets display to show solution
+                break;                                          //Ends the switch loop 
         }
         
-       num1 = 0.0;                                               //Clears the value stored in total1 to allow for a new equation to begin
+       num1 = 0.0;                                              //Clears the value stored in total1 to allow for a new equation to begin
     }//GEN-LAST:event_btnEqualsActionPerformed
-
+    // 'Cl' Button (Clear)
     private void btnClearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnClearActionPerformed
-        num2 = 0.0;                                                 //Clears value from total2 by setting it to zero
-        txtDisplay.setText("");                                       //Clears all text from the textbox
+        num2 = 0.0;                                                          //Clears value from total2 by setting it to zero
+        txtDisplay.setText("");                                              //Clears all text from the textbox
     }//GEN-LAST:event_btnClearActionPerformed
-
+    //Button number '1'
     private void btnOneActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnOneActionPerformed
-        String btnOneText = txtDisplay.getText() + btnOne.getText(); //Adds string stored in button to string in text box
-        txtDisplay.setText(btnOneText);                              //Displays the newly formed string
+        String btnOneText = txtDisplay.getText() + btnOne.getText();         //Adds string stored in button to string in text box
+        txtDisplay.setText(btnOneText);                                      //Displays the newly formed string
     }//GEN-LAST:event_btnOneActionPerformed
-
+    //Button for '.' (decimal point)
     private void btnDecimalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDecimalActionPerformed
         String btnDecimalText = txtDisplay.getText() + btnDecimal.getText(); //Adds string stored in button to string in the text box
-        txtDisplay.setText(btnDecimalText);                                 //Displays the newly formed string
+        txtDisplay.setText(btnDecimalText);                                  //Displays the newly formed string
     }//GEN-LAST:event_btnDecimalActionPerformed
-
+    // '-' Button (minus)
     private void btnMinusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMinusActionPerformed
         num1 = num1 + Double.parseDouble(txtDisplay.getText()); //Adds the current value of total1 to the value of the textbox converted to a double
-        txtDisplay.setText(""); //Clears text box
-        operator = '-'; //Defines the character of the opperator
+        txtDisplay.setText("");                                 //Clears text box
+        operator = '-';                                         //Defines the character of the opperator
     }//GEN-LAST:event_btnMinusActionPerformed
-
+    // '*' Button (multiplication)
     private void btnMultiplyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMultiplyActionPerformed
         num1 = num1 + Double.parseDouble(txtDisplay.getText()); //Adds the current value of total1 to the value of the textbox converted to a double
-        txtDisplay.setText(""); //Clears text box
-        operator = '*'; //Defines the character of the opperator
+        txtDisplay.setText("");                                 //Clears text box
+        operator = '*';                                         //Defines the character of the opperator
     }//GEN-LAST:event_btnMultiplyActionPerformed
-
+    // '/' Button (division)
     private void btnDivideActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDivideActionPerformed
         num1 = num1 + Double.parseDouble(txtDisplay.getText()); //Adds the current value of total1 to the value of the textbox converted to a double
-        txtDisplay.setText(""); //Clears text box
-        operator = '/'; //Defines the character of the opperator
+        txtDisplay.setText("");                                 //Clears text box
+        operator = '/';                                         //Defines the character of the opperator
     }//GEN-LAST:event_btnDivideActionPerformed
-
+    // 'Sqrt' Button (Square Root)
     private void btnSqrtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSqrtActionPerformed
         num1 = num1 + Double.parseDouble(txtDisplay.getText()); //Adds the current value of total1 to the value of the textbox converted to a double
-        //**Note no clear textbox because no secondary input needed for squareroot
-        operator = 's'; //Defines the character of the opperator
+                                                                //**Note no clear textbox because no secondary input needed for squareroot
+        operator = 's';                                         //Defines the character of the opperator
     }//GEN-LAST:event_btnSqrtActionPerformed
-
+    // 'X^Y' Button (number to the power of second number)
     private void btnSqActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSqActionPerformed
         num1 = num1 + Double.parseDouble(txtDisplay.getText()); //Adds the current value of total1 to the value of the textbox converted to a double
-        txtDisplay.setText(""); //Clears text box
-        operator = '^'; //Defines the character of the opperator
+        txtDisplay.setText("");                                 //Clears text box
+        operator = '^';                                         //Defines the character of the opperator
     }//GEN-LAST:event_btnSqActionPerformed
 
     /**
